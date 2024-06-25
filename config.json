@@ -17,9 +17,9 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "61551774501334",
-    "",
-    ""
+    "100053227594219",
+    "61561143479695",
+    
   ],
   "whiteListMode": {
     "enable": false,
@@ -31,7 +31,7 @@
   "GENDER": "MALE",
   "nickNameBot": "♡︎𝗠𝗜𝗥𝗔 𝗞𝗜𝗠 𝗥𝗢𝗕𝗢𝗧♡︎",
   "authorFB": "https://m.me/NOOBS.DEVELOPER.AYAN",
-  "prefix": ".",
+  "prefix": "∆",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
