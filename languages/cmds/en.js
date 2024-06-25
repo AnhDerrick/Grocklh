@@ -1,12 +1,12 @@
 module.exports = {
 	// You can customize the language here or directly in the command files
 	onlyadminbox: {
-		description: "turn on/off only admin box can use bot",
-		guide: "   {pn} [on | off]",
+		description: "activer ou désactiver l'utilisation du bot par seuls les admins du groupe.",
+		guide: "   {pn} on : pour activer (seuls les admins du groupe peuvent utiliser les cmds du bot. \n {pn} off: pour désactiver (tous les membres peuvent utiliser les cmds du bot.",
 		text: {
-			turnedOn: "Turned on the mode only admin of group can use bot",
-			turnedOff: "Turned off the mode only admin of group can use bot",
-			syntaxError: "Syntax error, only use {pn} on or {pn} off"
+			turnedOn: "✔️ | mode admin du groupe activé: seuls les admins du groupe peuvent utiliser le bot dorénavant.",
+			turnedOff: "🌹 | mode admin du groupe désactivé: tous peuvent utiliser les cmds du bot",
+			syntaxError: "❌ | erreur: tu as mal composé. tape help {pn} pour voir comment faire."
 		}
 	},
 	adduser: {
@@ -24,25 +24,25 @@ module.exports = {
 		}
 	},
 	admin: {
-		description: "Add, remove, edit admin role",
-		guide: "   {pn} [add | -a] <uid>: Add admin role for user\n\t  {pn} [remove | -r] <uid>: Remove admin role of user\n\t  {pn} [list | -l]: List all admins",
+		description: "nommer ou supprimer un utilisateur des admins du bot, modification sur le pouvoir d'admin.",
+		guide: "   {pn} [add | -a] <uid>: pour nommer un utilisateur admin du bot\n\t  {pn} [remove | -r] <uid>: pour supprimer un utilisateur des admins du bot.\n\t  {pn} [list | -l]: pour voir la liste des admins du bot.",
 		text: {
-			added: "✅ | Added admin role for %1 users:\n%2",
-			alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
-			missingIdAdd: "⚠️ | Please enter ID or tag user to add admin role",
-			removed: "✅ | Removed admin role of %1 users:\n%2",
-			notAdmin: "⚠️ | %1 users don't have admin role:\n%2",
-			missingIdRemove: "⚠️ | Please enter ID or tag user to remove admin role",
-			listAdmin: "👑 | List of admins:\n%1"
+			added: "✅ |  %1 utilisateurs sont nommés admins du bot:\n%2",
+			alreadyAdmin: "\n⚠️ | %1 déjà nommé(s) admin(s):\n%2",
+			missingIdAdd: "⚠️ | tu n'as pas mis l'uid de l'utilisateur que tu veux nommer ou mentionne son nom d'utilisateur (@nom).",
+			removed: "✅ |  %1 utilisateur(s) supprimés des admins:\n%2",
+			notAdmin: "⚠️ | %1 utilisateur(s) que tu veux supprimer des admins n'est (ne sont) même pas admin(s):\n%2 .",
+			missingIdRemove: "⚠️ | tu n'as pas mis l'uid de l'utilisateur que tu veux supprimer des admins du bot. tu peux aussi le taguer (@nom d'utilisateur).",
+			listAdmin: "👑 | liste des admins du bot:\n%1"
 		}
 	},
 	adminonly: {
-		description: "turn on/off only admin can use bot",
-		guide: "{pn} [on | off]",
+		description: "seuls les admins du bot pourront utiliser les cmds du bot.",
+		guide: "{pn} on: pour activer,\n {pn} off: pour désactiver.",
 		text: {
-			turnedOn: "Turned on the mode only admin can use bot",
-			turnedOff: "Turned off the mode only admin can use bot",
-			syntaxError: "Syntax error, only use {pn} on or {pn} off"
+			turnedOn: "✔️ | mode admins du bot activité: seuls eux peuvent utiliser les cmds désormais.",
+			turnedOff: "mode admins du bot désactivé: tout le monde peut utiliser les cmds maintenant.",
+			syntaxError: "erreur..!! tape {pn} pour voir comment faire."
 		}
 	},
 	all: {
@@ -58,22 +58,22 @@ module.exports = {
 		}
 	},
 	antichangeinfobox: {
-		description: "Turn on/off anti change info box",
-		guide: "   {pn} avt [on | off]: anti change avatar box chat\n   {pn} name [on | off]: anti change name box chat\n   {pn} theme [on | off]: anti change theme (chủ đề) box chat\n   {pn} emoji [on | off]: anti change emoji box chat",
+		description: "empêche les membres qui ne sont pas des admins du groupe de changer les caractéristiques (photo de profil, nom, thème, réaction rapide) du bot.",
+		guide: "   {pn} avt [on | off]: permettre ou ne pas permettre la modification de la photo de profil du groupe.\n   {pn} name [on | off]: permettre ou ne pas permettre la modification du nom du groupe. \n   {pn} theme [on | off]: permettre ou ne pas permettre de changer le thème. \n   {pn} emoji [on | off]: permettre ou ne pas permettre de changer la réaction rapide.",
 		text: {
-			antiChangeAvatarOn: "Turn on anti change avatar box chat",
-			antiChangeAvatarOff: "Turn off anti change avatar box chat",
-			missingAvt: "You have not set avatar for box chat",
-			antiChangeNameOn: "Turn on anti change name box chat",
-			antiChangeNameOff: "Turn off anti change name box chat",
-			antiChangeThemeOn: "Turn on anti change theme box chat",
-			antiChangeThemeOff: "Turn off anti change theme box chat",
-			antiChangeEmojiOn: "Turn on anti change emoji box chat",
-			antiChangeEmojiOff: "Turn off anti change emoji box chat",
-			antiChangeAvatarAlreadyOn: "Your box chat is currently on anti change avatar",
-			antiChangeNameAlreadyOn: "Your box chat is currently on anti change name",
-			antiChangeThemeAlreadyOn: "Your box chat is currently on anti change theme",
-			antiChangeEmojiAlreadyOn: "Your box chat is currently on anti change emoji"
+			antiChangeAvatarOn: "✔️ | modification de la profile désactivée. seuls les admins du groupe ont le pouvoir.",
+			antiChangeAvatarOff: "modification de la photo de profil activitée.",
+			missingAvt: "ton groupe n'a même pas de photo de profil.",
+			antiChangeNameOn: "✔️| seuls les admins ont désormais le pouvoir de changer le nom du groupe.",
+			antiChangeNameOff: "✔️| tout le monde peut maintenant changer le nom du groupe.",
+			antiChangeThemeOn: "✔️| seul les admins du groupe peuvent changer le thème désormais.",
+			antiChangeThemeOff: " ✔️| tous peuvent maintenant changer le thème groupe.",
+			antiChangeEmojiOn: " ✔️| seul les admins du groupe peuvent changer la réaction rapide désormais.",
+			antiChangeEmojiOff: " ✔️| tous peuvent maintenant changer la réaction rapide groupe.",
+			antiChangeAvatarAlreadyOn: "✴️ la modification de la photo de profil du groupe est déjà interdite.",
+			antiChangeNameAlreadyOn: "✴️ la modification du nom du groupe est déjà interdite.",
+			antiChangeThemeAlreadyOn: "✴️ la modification du thème du groupe est déjà interdite.",
+			antiChangeEmojiAlreadyOn: "✴️ la modification de la réaction rapide du groupe est déjà interdite."
 		}
 	},
 	appstore: {
@@ -140,11 +140,11 @@ module.exports = {
 		}
 	},
 	balance: {
-		description: "view your money or the money of the tagged person",
-		guide: "   {pn}: view your money\n   {pn} <@tag>: view the money of the tagged person",
+		description: "voir le montant de d'argent qu'on a ou que quelqu'un a dans son portefeuille.",
+		guide: "   {pn}: voir le montant qu'on a dans le portefeuille. \n   {pn} <@tag>: pour consulter le portefeuille de la personne mentionnée.",
 		text: {
-			money: "You have %1$",
-			moneyOf: "%1 has %2$"
+			money: "T'as %1$",
+			moneyOf: "%1 a %2$"
 		}
 	},
 	batslap: {
